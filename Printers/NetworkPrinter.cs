@@ -18,19 +18,15 @@ namespace Tei.Epos.Utilities.Printers
         {
             _networkConfig = config as INetworkConfig;
         }
-
         public override void Set(IPrintCommand command)
         {
             _command = command;
             command.SetConfig(_networkConfig);
         }
-
-
         public override void Print(IFluentPrint document)
         {
             _command.Print(document);
         }
-
         protected override void Connect()
         {
 
@@ -39,7 +35,6 @@ namespace Tei.Epos.Utilities.Printers
         {
             
         }
-     
    
     }
 }
