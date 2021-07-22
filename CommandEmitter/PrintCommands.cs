@@ -1,4 +1,5 @@
 ﻿using Tei.Epos.Utilities.Interfaces;
+using Tei.Epos.Utilities.Printers;
 
 namespace Tei.Epos.Utilities
 {
@@ -12,9 +13,16 @@ namespace Tei.Epos.Utilities
         {
             throw new System.NotImplementedException();
         }
+
+        public void Print(IFluentPrint document, NetworkPrinter.ShowPrintData showPrintData)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void SetConfig(IConfig config)
         {
 
         }
+
     }
 }

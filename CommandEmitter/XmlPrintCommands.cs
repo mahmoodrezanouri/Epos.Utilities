@@ -4,6 +4,7 @@ using System;
 using System.Net;
 using System.Text;
 using System.Xml.Linq;
+using static Tei.Epos.Utilities.Printers.NetworkPrinter;
 
 namespace Tei.Epos.Utilities.Command
 {
@@ -16,10 +17,18 @@ namespace Tei.Epos.Utilities.Command
         {
         }
 
+
         public void Print(IFluentPrint document)
         {
            var request = document.ToXmlRequest();
             SendRequestToPrinter(request);
+        }
+
+        public void Print(IFluentPrint document, ShowPrintData showPrintData)
+        {
+            var request = document.ToXmlRequest();
+            showPrintData($"Printer : {_networkConfig.PrinterName}{Environment.NewLine}IP : {_networkConfig.IpAddress }{Environment.NewLine}Print Data : {request.ToString()}");
+           // SendRequestToPrinter(request);
         }
 
         public void SetConfig(IConfig config)

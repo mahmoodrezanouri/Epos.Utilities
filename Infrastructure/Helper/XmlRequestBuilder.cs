@@ -19,7 +19,7 @@ namespace Tei.Epos.Utilities.Infrastructure.Helper
             envelope.Add(body);
             body.Add(print);
 
-            var printDocuments = document.GetPrintDocuments();
+            var printDocuments = document.Build();
 
             foreach(var doc in printDocuments)
             {

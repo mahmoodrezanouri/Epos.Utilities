@@ -11,9 +11,7 @@ namespace Tei.Epos.Utilities.Interfaces
         IFluentPrint PrintImage(string text);
         IFluentPrint SetStyles(string style);
         IFluentPrint SetStyles(object style);
-        void Finish();
-
-        ICollection<IPrintDocumentElement> GetPrintDocuments();
+        ICollection<IPrintDocumentElement> Build();
 
     }
 

@@ -25,7 +25,9 @@ namespace Tei.Epos.Utilities.Printers
         }
         public override void Print(IFluentPrint document)
         {
-            _command.Print(document);
+            ShowPrintData showPrintData = PrintOutPut;
+            _command.Print(document, showPrintData);
+          
         }
         protected override void Connect()
         {
@@ -35,6 +37,8 @@ namespace Tei.Epos.Utilities.Printers
         {
             
         }
-   
+
+        public delegate void ShowPrintData(string printData);
+
     }
 }

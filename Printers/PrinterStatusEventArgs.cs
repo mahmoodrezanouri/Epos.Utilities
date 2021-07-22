@@ -4,6 +4,6 @@ namespace Tei.Epos.Utilities.Printers
 {
     public class PrinterStatusEventArgs : EventArgs
     {
-        public bool IsPrinterOnline { get; set; }
+        public string PrintData { get; set; }
     }
 }
