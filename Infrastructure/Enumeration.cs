@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Epos.Utilities.Infrastructure
+namespace Tei.Epos.Utilities.Infrastructure
 {
     public abstract class Enumeration : IComparable {
         public string Name { get; private set; }

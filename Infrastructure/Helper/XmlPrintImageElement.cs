@@ -1,4 +1,4 @@
-﻿namespace Epos.Utilities.Infrastructure.Helper
+﻿namespace Tei.Epos.Utilities.Infrastructure.Helper
 {
     public class XmlPrintImageElement : BaseXmlPrintElement
     {

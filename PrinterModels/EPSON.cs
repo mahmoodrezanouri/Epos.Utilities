@@ -1,7 +1,7 @@
 ﻿
-using Epos.Utilities.Command;
+using Tei.Epos.Utilities.Command;
 
-namespace Epos.Utilities.PrinterModels
+namespace Tei.Epos.Utilities.PrinterModels
 {
     public class EPSON : XmlPrintCommands
     {

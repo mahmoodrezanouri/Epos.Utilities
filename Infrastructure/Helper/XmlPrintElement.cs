@@ -1,10 +1,10 @@
-﻿using Epos.Utilities.Interfaces;
+﻿using Tei.Epos.Utilities.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace Epos.Utilities.Infrastructure.Helper
+namespace Tei.Epos.Utilities.Infrastructure.Helper
 {
     public class XmlPrintElement : Enumeration
     {

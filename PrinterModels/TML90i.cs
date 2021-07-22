@@ -1,7 +1,7 @@
 ﻿
-using Epos.Utilities.Command;
+using Tei.Epos.Utilities.Command;
 
-namespace Epos.Utilities.Brands
+namespace Tei.Epos.Utilities.Brands
 {
     public class TML90i : XmlPrintCommands
     {

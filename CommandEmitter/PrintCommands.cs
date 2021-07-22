@@ -1,6 +1,6 @@
-﻿using Epos.Utilities.Interfaces;
+﻿using Tei.Epos.Utilities.Interfaces;
 
-namespace Epos.Utilities
+namespace Tei.Epos.Utilities
 {
     public abstract partial class BaseCommandEmitter : IPrintCommand
     {
@@ -8,12 +8,10 @@ namespace Epos.Utilities
         {
             
         }
-
         public void Print(IFluentPrint document)
         {
             throw new System.NotImplementedException();
         }
-
         public void SetConfig(IConfig config)
         {
 

@@ -1,11 +1,11 @@
-﻿using Epos.Utilities.Infrastructure.Helper;
-using Epos.Utilities.Interfaces;
+﻿using Tei.Epos.Utilities.Infrastructure.Helper;
+using Tei.Epos.Utilities.Interfaces;
 using System;
 using System.Net;
 using System.Text;
 using System.Xml.Linq;
 
-namespace Epos.Utilities.Command
+namespace Tei.Epos.Utilities.Command
 {
     public partial class XmlPrintCommands : IPrintCommand
     {
@@ -28,13 +28,10 @@ namespace Epos.Utilities.Command
             address = $"http://{_networkConfig.IpAddress}/cgi-bin/epos/service.cgi?devid={_networkConfig.PrinterName}&timeout={_networkConfig.TimeOut}";
         }
 
-        // Send print document
         private void SendRequestToPrinter(XElement req)
         {
             WebClient client = new WebClient();
             client.Headers["Content-Type"] = "text/xml; charset=utf-8";
-            // client.UploadStringCompleted += new UploadStringCompletedEventHandler(UploadStringCompleted);
-            //client.UploadStringAsync(new Uri(address, UriKind.Absolute), req.ToString());
             var result = client.UploadString(new Uri(address, UriKind.Absolute), req.ToString());
         }
 

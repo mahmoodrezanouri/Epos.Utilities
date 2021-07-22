@@ -1,4 +1,4 @@
-﻿namespace Epos.Utilities.Interfaces
+﻿namespace Tei.Epos.Utilities.Interfaces
 {
     public interface INetworkConfig : IConfig
     {

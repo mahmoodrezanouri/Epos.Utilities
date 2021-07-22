@@ -1,7 +1,7 @@
-using Epos.Utilities.Interfaces;
+using Tei.Epos.Utilities.Interfaces;
 using System;
 
-namespace Epos.Utilities.Printers
+namespace Tei.Epos.Utilities.Printers
 {
     public abstract partial class BasePrinter : IDisposable
     {

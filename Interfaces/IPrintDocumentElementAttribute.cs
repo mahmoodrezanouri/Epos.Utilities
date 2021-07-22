@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Epos.Utilities.Interfaces
+namespace Tei.Epos.Utilities.Interfaces
 {
     public interface IPrintDocumentElementAttribute
     {
