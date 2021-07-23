@@ -24,7 +24,7 @@ namespace TEI.Epos.Utilities.Infrastructure.XmlHelper.Helper
 
         public static IEnumerable<BaseXmlPrintElement> List()
         {
-            var list = new List<BaseXmlPrintElement>() {
+            var list = new List<BaseXmlPrintElement> {
 
                RootPrintElement,
                Text,

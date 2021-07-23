@@ -1,28 +1,21 @@
-﻿using TEI.Epos.Utilities.Infrastructure.Helper;
-using TEI.Epos.Utilities.Interfaces;
+﻿using TEI.Epos.Utilities.Interfaces;
 using System;
-using System.Net;
-using System.Text;
-using System.Xml.Linq;
 using static TEI.Epos.Utilities.Printers.BasePrinter;
 
 namespace TEI.Epos.Utilities.Commands
 {
     public partial class SimplePrintCommand : IPrintCommand
     {
-        private string address = string.Empty;
+       
         private INetworkConfig _networkConfig;
 
         public void Print(string data)
         {
         }
-
-
         public void Print(IFluentPrintDocumentBuilder document)
         {
            //var request = document.ToXmlRequest();
         }
-
         public void Print(IFluentPrintDocumentBuilder document, ShowPrintData showPrintData)
         {
             var printDoc = document.Build();
