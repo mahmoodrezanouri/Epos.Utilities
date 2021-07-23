@@ -1,14 +1,14 @@
-﻿using Tei.Epos.Utilities.Infrastructure.Helper;
-using Tei.Epos.Utilities.Interfaces;
+﻿using TEI.Epos.Utilities.Infrastructure.Helper;
+using TEI.Epos.Utilities.Interfaces;
 using System;
 using System.Net;
 using System.Text;
 using System.Xml.Linq;
-using static Tei.Epos.Utilities.Printers.NetworkPrinter;
+using static TEI.Epos.Utilities.Printers.BasePrinter;
 
-namespace Tei.Epos.Utilities.Command
+namespace TEI.Epos.Utilities.Commands
 {
-    public partial class SimplePrintCommands : IPrintCommand
+    public partial class SimplePrintCommand : IPrintCommand
     {
         private string address = string.Empty;
         private INetworkConfig _networkConfig;
@@ -18,12 +18,12 @@ namespace Tei.Epos.Utilities.Command
         }
 
 
-        public void Print(IFluentPrint document)
+        public void Print(IFluentPrintDocumentBuilder document)
         {
            //var request = document.ToXmlRequest();
         }
 
-        public void Print(IFluentPrint document, ShowPrintData showPrintData)
+        public void Print(IFluentPrintDocumentBuilder document, ShowPrintData showPrintData)
         {
             var printDoc = document.Build();
 
@@ -38,7 +38,7 @@ namespace Tei.Epos.Utilities.Command
             showPrintData($"Printer : {_networkConfig.PrinterName}{Environment.NewLine}IP : {_networkConfig.IpAddress }{Environment.NewLine}Print Data : {request}");
         }
 
-        public void SetConfig(IConfig config)
+        public void SetConfig(IPrinterConfig config)
         {
             _networkConfig = config as INetworkConfig;
         }

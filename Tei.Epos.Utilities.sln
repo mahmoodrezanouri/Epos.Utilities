@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tei.Epos.Utilities", "Tei.Epos.Utilities.csproj", "{14585A8C-2A33-4320-BE09-2A7210F5B766}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TEI.Epos.Utilities", "TEI.Epos.Utilities.csproj", "{14585A8C-2A33-4320-BE09-2A7210F5B766}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tei.Epos.Utilities.Test", "..\Epos.Utilities.Test\Tei.Epos.Utilities.Test.csproj", "{249C34B8-396F-48F7-8357-35FF3D35514C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TEI.Epos.Utilities.Test", "..\TEI.Epos.Utilities.Test\TEI.Epos.Utilities.Test.csproj", "{249C34B8-396F-48F7-8357-35FF3D35514C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tei.Epos.Utilities.Adapter", "..\EposUtilitiesAdapter\Tei.Epos.Utilities.Adapter.csproj", "{D1465E01-ABF3-4CFC-B4A1-6D214EC76651}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TEI.Epos.Utilities.Adapter", "..\TEI.Epos.Utilities.Adapter\TEI.Epos.Utilities.Adapter.csproj", "{D1465E01-ABF3-4CFC-B4A1-6D214EC76651}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tei.Epos.Utilities.Interfaces
+namespace TEI.Epos.Utilities.Interfaces
 {
-    public interface IFluentPrint 
+    public interface IFluentPrintDocumentBuilder
     {
-        IFluentPrint PrintLine(string text, TextStyle style = default(TextStyle), IEnumerable<TextAttribute> attributes = default(IEnumerable<TextAttribute>));
-        IFluentPrint PrintNewLine();
-        IFluentPrint PrintImage(string text);
-        IFluentPrint SetStyles(string style);
-        IFluentPrint SetStyles(object style);
+        IFluentPrintDocumentBuilder PrintLine(string text, TextStyle style = default(TextStyle), IEnumerable<TextAttribute> attributes = default(IEnumerable<TextAttribute>));
+        IFluentPrintDocumentBuilder PrintNewLine();
+        IFluentPrintDocumentBuilder PrintImage(string text);
+        IFluentPrintDocumentBuilder SetStyles(string style);
+        IFluentPrintDocumentBuilder SetStyles(object style);
         ICollection<IPrintDocumentElement> Build();
-
     }
-
     public struct TextStyle : IPrintDocumentElementAttribute
     {
         public string Width { get; set; }

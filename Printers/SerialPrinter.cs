@@ -1,5 +1,5 @@
 
-namespace Tei.Epos.Utilities.Printers
+namespace TEI.Epos.Utilities.Printers
 {
     public class SerialPrinter : BasePrinter
     {

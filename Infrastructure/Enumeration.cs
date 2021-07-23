@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Tei.Epos.Utilities.Infrastructure
+namespace TEI.Epos.Utilities.Infrastructure
 {
     public abstract class Enumeration : IComparable {
         public string Name { get; private set; }
@@ -37,7 +35,6 @@ namespace Tei.Epos.Utilities.Infrastructure
                 }
             }
         }
-
         public override bool Equals(object obj) {
             var otherValue = obj as Enumeration;
 

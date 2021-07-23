@@ -1,10 +1,8 @@
-﻿using Tei.Epos.Utilities.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using TEI.Epos.Utilities.Interfaces;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace Tei.Epos.Utilities.Infrastructure.Helper
+namespace TEI.Epos.Utilities.Infrastructure.Helper.XmlHelper.Elements
 {
     public class XmlPrintTextElement : BaseXmlPrintElement
     {
@@ -13,12 +11,11 @@ namespace Tei.Epos.Utilities.Infrastructure.Helper
         {
 
         }
-
         public override XElement CreateElement(IPrintDocumentElement documentElement)
         {
             var textLineDocumentElement = (BaseTextLineDocumentElement)documentElement;
 
-            var textEl = new XElement(Epos + Name);
+            var textEl = new XElement(nameSpace + TagName);
             textEl.Add(textLineDocumentElement.Value);
 
             if(textLineDocumentElement.Attributes != null && textLineDocumentElement.Attributes.Any())
@@ -28,7 +25,6 @@ namespace Tei.Epos.Utilities.Infrastructure.Helper
                     textEl.Add(new XAttribute(attr.Name, attr.Value));
                 }
             }
-
 
             return textEl;
         }

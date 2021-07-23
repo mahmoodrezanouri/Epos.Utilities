@@ -1,6 +1,6 @@
-﻿namespace Tei.Epos.Utilities.Interfaces
+﻿namespace TEI.Epos.Utilities.Interfaces
 {
-    public interface INetworkConfig : IConfig
+    public interface INetworkConfig : IPrinterConfig
     {
         string IpAddress { get; set; }
         int Port { get; set; }

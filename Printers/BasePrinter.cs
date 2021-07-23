@@ -1,7 +1,7 @@
-using Tei.Epos.Utilities.Interfaces;
+using TEI.Epos.Utilities.Interfaces;
 using System;
 
-namespace Tei.Epos.Utilities.Printers
+namespace TEI.Epos.Utilities.Printers
 {
     public abstract partial class BasePrinter : IDisposable
     {
@@ -9,6 +9,7 @@ namespace Tei.Epos.Utilities.Printers
 
         public event EventHandler StatusChanged;
 
+        public delegate void ShowPrintData(string printData);
         protected virtual bool IsConnected => false;
 
         protected BasePrinter()
@@ -31,7 +32,7 @@ namespace Tei.Epos.Utilities.Printers
 
         }
 
-        public virtual void Print(IFluentPrint document)
+        public virtual void Print(IFluentPrintDocumentBuilder document)
         {
 
         }

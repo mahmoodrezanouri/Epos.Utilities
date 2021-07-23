@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tei.Epos.Utilities.Infrastructure.Helper
+namespace TEI.Epos.Utilities.Infrastructure.Helper.XmlHelper.Elements
 {
     public class XmlPrintNewLineElement : BaseXmlPrintElement
     {

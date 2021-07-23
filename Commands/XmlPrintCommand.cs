@@ -1,14 +1,15 @@
-﻿using Tei.Epos.Utilities.Infrastructure.Helper;
-using Tei.Epos.Utilities.Interfaces;
+﻿using TEI.Epos.Utilities.Infrastructure.Helper;
+using TEI.Epos.Utilities.Interfaces;
 using System;
 using System.Net;
-using System.Text;
 using System.Xml.Linq;
-using static Tei.Epos.Utilities.Printers.NetworkPrinter;
+using static TEI.Epos.Utilities.Printers.BasePrinter;
+using TEI.Epos.Utilities.Infrastructure.Extensions;
+using TEI.Epos.Utilities.Infrastructure.XmlHelper.Helper;
 
-namespace Tei.Epos.Utilities.Command
+namespace TEI.Epos.Utilities.Commands
 {
-    public partial class XmlPrintCommands : IPrintCommand
+    public partial class XmlPrintCommand : IPrintCommand
     {
         private string address = string.Empty;
         private INetworkConfig _networkConfig;
@@ -16,27 +17,23 @@ namespace Tei.Epos.Utilities.Command
         public void Print(string data)
         {
         }
-
-
-        public void Print(IFluentPrint document)
+        public void Print(IFluentPrintDocumentBuilder document)
         {
-           var request = document.ToXmlRequest();
+           var request = document.ToXmlRequest("EPSON");
             SendRequestToPrinter(request);
         }
 
-        public void Print(IFluentPrint document, ShowPrintData showPrintData)
+        public void Print(IFluentPrintDocumentBuilder document, ShowPrintData showPrintData)
         {
-            var request = document.ToXmlRequest();
+            var request = document.ToXmlRequest("EPSON");
             showPrintData($"Printer : {_networkConfig.PrinterName}{Environment.NewLine}IP : {_networkConfig.IpAddress }{Environment.NewLine}Print Data : {request.ToString()}");
            // SendRequestToPrinter(request);
         }
-
-        public void SetConfig(IConfig config)
+        public void SetConfig(IPrinterConfig config)
         {
             _networkConfig = config as INetworkConfig;
             address = $"http://{_networkConfig.IpAddress}/cgi-bin/epos/service.cgi?devid={_networkConfig.PrinterName}&timeout={_networkConfig.TimeOut}";
         }
-
         private void SendRequestToPrinter(XElement req)
         {
             WebClient client = new WebClient();

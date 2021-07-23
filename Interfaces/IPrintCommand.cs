@@ -1,15 +1,15 @@
-﻿using static Tei.Epos.Utilities.Printers.NetworkPrinter;
+﻿using static TEI.Epos.Utilities.Printers.BasePrinter;
 
-namespace Tei.Epos.Utilities.Interfaces
+namespace TEI.Epos.Utilities.Interfaces
 {
     public interface IPrintCommand
     {
         void Print(string data);
 
-        void Print(IFluentPrint document);
+        void Print(IFluentPrintDocumentBuilder document);
 
-        void SetConfig(IConfig config);
+        void SetConfig(IPrinterConfig config);
 
-        void Print(IFluentPrint document, ShowPrintData showPrintData);
+        void Print(IFluentPrintDocumentBuilder document, ShowPrintData showPrintData);
     }
 }

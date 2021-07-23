@@ -1,11 +1,7 @@
-﻿using Tei.Epos.Utilities.Interfaces;
-using System;
-using System.IO;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
+﻿using TEI.Epos.Utilities.Interfaces;
 
-namespace Tei.Epos.Utilities.Printers
+
+namespace TEI.Epos.Utilities.Printers.Configs
 {
     public class NetworkConfig : INetworkConfig
     {
